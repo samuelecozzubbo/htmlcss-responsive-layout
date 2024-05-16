@@ -6,14 +6,9 @@
     font-family: "PT Sans" , sans-serif;
 }
 
-section{
-    max-width: 2100px;
-    margin: 0  auto;
-    /* Debug */
-    /* background-color: aqua; */
-}
 .container{
     max-width: 2100px;
+    margin: 0  auto;
 }
 
 .col{
@@ -30,6 +25,10 @@ section{
 
 .white{
     background-color: white;
+}
+
+.white-text{
+    color: white;
 }
 
 .button{
@@ -68,7 +67,6 @@ a{
 }
 
 .section-p{
-    font-weight: bolder;
     color: white;
     line-height: 30px;
 }
@@ -141,6 +139,13 @@ header .container{
     padding-bottom: 0;
 }
 
+.col-big-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
 .col img{
     max-width: 60%;
 }
@@ -151,11 +156,8 @@ header .container{
 }
 
 /* Sezione funzionalità */
-#planning{
-    background-color: #9792E4;
-}
-
 #planning .container{
+    background-color: #9792E4;
     margin: 0 auto;
     padding: 30px 30px;
     display: flex;
@@ -183,12 +185,61 @@ header .container{
     border-radius: 100%;
 }
 
+/* Sezione testimonial */
+#testimonial-title{
+    font-size: 40px;
+    color: #9792E4;
+    margin: 20px 0;
+}
+
+#testimonial .col.title{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.col.card{
+    background-color: #9792E4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.col.card img{
+    max-width: 30%;
+    border-radius: 50%;
+
+}
+
+
+/*****************************
+    Versione Tablet
+********************************/
+@media all and (min-width:768px) {
+    #funzionalita .container{
+        width: 95%;
+        display: flex;
+    }
+
+    #funzionalita .col{
+        width: calc((100% / 3) - 10px);
+    }
+
+    #funzionalita .col.big{
+        width: calc(((100% / 3) * 2) - 10px);
+    }
+
+    .section-title{
+        font-size: 70px;
+    }
+}
+
 /*****************************
     Versione Desktop
 ********************************/
 @media all and (min-width:1025px) {
-    .container{
-        max-width: 80%;
+    #funzionalita .container{
+        width: 75%;
     }
 
     #hamburger{
@@ -213,31 +264,29 @@ header .container{
         width: 50%;
     }
 
+    #funzionalita .col.big{
+        padding-bottom: 0;
+        flex-direction: row;
+    }
+
+    .col-big-item{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-grow: 2;
+        flex-basis: 0;
+        gap: 20px;
+    }
+
+    .col img{
+        max-width: 250px;
+        align-self: flex-end;
+    }
+
     .section-title{
-        font-size: 10px;
+        font-size: 40px;
     }
     
 
-}
-
-/*****************************
-    Versione Tablet
-********************************/
-@media all and (min-width:768px) {
-    #funzionalita .container{
-        width: 95%;
-        display: flex;
-    }
-
-    #funzionalita .col{
-        width: calc((100% / 3) - 10px);
-    }
-
-    #funzionalita .col.big{
-        width: calc(((100% / 3) * 2) - 10px);
-    }
-
-    .section-title{
-        font-size: 70px;
-    }
 }
