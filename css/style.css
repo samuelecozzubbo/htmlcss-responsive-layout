@@ -5,3 +5,93 @@
     box-sizing: border-box;
     font-family: "PT Sans" , sans-serif;
 }
+
+.container{
+    max-width: 2100px;
+    margin: 0 auto;
+}
+
+
+.col{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-color: lightblue;
+    min-height: 100px;
+}
+
+/* Regole header */
+header{
+    background-color: #0084FD ;
+    height: 80px;
+}
+
+header .container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    width: 70px;
+    height: 40px;
+    background-color: blue;
+}
+
+#hamburger{
+    width: 70px;
+    height: 40px;
+    background-color: blue;
+}
+
+#main-nav{
+    display: none;
+}
+
+/* Regole main */
+/* Sezione funzionalita */
+#funzionalita{
+    margin: 40px 0;
+}
+
+/*****************************
+    Versione Desktop
+********************************/
+@media all and (min-width:1025px) {
+    .container{
+        width: 70%;
+    }
+
+    #hamburger{
+        display: none;
+    }
+
+    
+    #main-nav{
+    display: inline-block;
+    width: 70px;
+    height: 40px;
+    background-color: rgb(255, 0, 0);
+    }
+
+}
+
+/*****************************
+    Versione Tablet
+********************************/
+@media all and (min-width:768px) {
+    #funzionalita .container{
+        width: 90%;
+        display: flex;
+    }
+
+    #funzionalita .col{
+        width: calc((100% / 3) - 10px);
+    }
+
+    #funzionalita .col.big{
+        width: calc(((100% / 3) * 2) - 10px);
+    }
+}
