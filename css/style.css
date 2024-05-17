@@ -94,6 +94,9 @@ header{
     max-width: 2100px;
     height: 80px;
     margin: 0 auto;
+    position: fixed;
+    width: 100%;
+    z-index: 900;
 }
 
 header .container{
@@ -141,7 +144,7 @@ header .container{
 /* Regole main */
 /* Sezione funzionalita */
 #funzionalita{
-    padding: 40px 0;
+    padding: 120px 0 40px;
 }
 
 #funzionalita .container{
@@ -176,7 +179,7 @@ header .container{
     font-size: 100px;
 }
 
-/* Sezione funzionalità */
+/* Sezione planning */
 #planning .container{
     background-color: #9792E4;
     margin: 0 auto;
@@ -191,13 +194,12 @@ header .container{
     max-width: 100%;
 }
 
-#planning .col{
-    width: 100%;
+#planning > .container > .col{
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 #down-arrow{
@@ -294,7 +296,7 @@ header .container{
     border-radius: 50%;
 }
 
-.fa-quote-left{
+.fa-quote-left.absolute{
     position: absolute;
     color: #9792E4;
     left: 150px;
@@ -404,6 +406,10 @@ footer span{
         font-size: 70px;
     }
 
+    .fa-quote-left.absolute{
+        left: 180px;
+    }
+
     #get-started > .container{
         max-width: 60%;
     }
@@ -438,14 +444,15 @@ footer span{
     background-color: rgb(255, 0, 0); */
     }
 
-    #planning .container{
+    #planning > .container{
         display: flex;
         flex-direction: row;
+        align-items: flex-end;
         max-width: 70%;
     }
 
-    #planning.col{
-        width: 50%;
+    #planning > .container > .col.white{
+        max-width: 40%;
     }
 
     #funzionalita .col.big{
@@ -481,6 +488,10 @@ footer span{
     .col.work-card{
         max-width: calc(100% / 3 - 40px);
         gap: 20px;
+    }
+
+    .fa-quote-left.absolute{
+        left: 200px;
     }
 
     #about-us > .container{
