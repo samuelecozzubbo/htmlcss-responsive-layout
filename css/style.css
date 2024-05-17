@@ -325,6 +325,21 @@ header .container{
     font-size: 50px;
 }
 
+/* Footer */
+footer{
+    text-align: center;
+    background-color: #333333;
+}
+
+footer > .container{
+    max-width: 90%;
+    padding: 20px 0;
+}
+
+footer span{
+    color: #9792E4;
+}
+
 
 
 
@@ -390,11 +405,15 @@ header .container{
     }
 
     #get-started > .container{
-        max-width: 80%;
+        max-width: 60%;
     }
 
     #big-title{
         font-size: 80px;
+    }
+
+    footer > .container{
+        max-width: 60%;
     }
 }
 
@@ -467,7 +486,7 @@ header .container{
     #about-us > .container{
         max-width: 70%;
     }
-    #get-started > .container{
+    #get-started > .container,footer > .container{
         max-width: 40%;
     }
 }
